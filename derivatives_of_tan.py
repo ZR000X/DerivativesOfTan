@@ -1,3 +1,21 @@
+class TanBinaryTree:
+    def __init__(self) -> None:
+        self.depth = 0
+        self.a = 1
+        self.b = 0
+        self.c = 1
+        self.left = None
+        self.right = None        
+
+    def get_b(seq):
+        pass
+
+    def get_c(seq):
+        pass
+
+    def get_a(seq):
+        pass
+
 def tan_b(seq):
     """
     Recursive function to find the b value of a path
@@ -67,36 +85,6 @@ def tan_combine_like_terms(terms):
         for c in output[b]:
             output1.append([output[b][c],b,c])
     return output1
-
-def print_tan_derivative_no_like_terms(n):
-    """
-    Main method that will compute the nth derivative of tan,
-    but DOES NOT combine like terms.
-    """
-    output = ""
-    seqs = get_seqs_n(n)
-    for seq in seqs:
-        a = tan_a(seq)
-        if a != 0:
-            if a != 1:
-                output += f"{a}"
-            b = tan_b(seq)
-            if b != 0:
-                if b != 1:
-                    output += f"sec{b}"
-                else:
-                    output += "sec"
-            c = tan_c(seq)
-            if c != 0:
-                if c != 1:
-                    output += f"tan{c}"
-                else:
-                    output += "tan"
-            output += " + "
-    output = output.strip()
-    if output.endswith("+"):
-        output = output[:-1]
-    print(output)
 
 def print_tan_derivative(n):
     """
